@@ -27,7 +27,6 @@
     }
     stage("Publish") {
       withDockerRegistry([credentialsId: 'DockerHub']) {
-	  echo "docker push " ${DOCKERHUB_USERNAME} "/cd-demo:" ${BUILD_NUMBER}
         sh "docker push ${DOCKERHUB_USERNAME}/cd-demo:${BUILD_NUMBER}"
       }
     }
