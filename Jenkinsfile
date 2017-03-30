@@ -2,8 +2,10 @@
 
   node("docker-test") {
     checkout scm
-
-    stage("Unit Test") {
+	
+	sh "docker info"
+    
+	stage("Unit Test") {
       sh "docker run --rm -v ${WORKSPACE}:/go/src/cd-demo golang go test cd-demo -v --run Unit"
     }
     stage("Integration Test") {
