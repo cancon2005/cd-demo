@@ -36,7 +36,7 @@
 
   node("docker-stage") {
     checkout scm
-
+	sh "docker info"
     stage("Staging") {
       try {
         sh "docker rm -f cd-demo || true"
