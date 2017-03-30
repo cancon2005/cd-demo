@@ -8,7 +8,7 @@ import (
 
 func TestUnit(t *testing.T) {
 	cases := []struct{ question, reply string }{
-		{"ping", "pongo"},
+		{"ping", "pong"},
 		{"hi", "holla"},
 	}
 
